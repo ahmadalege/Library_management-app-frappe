@@ -242,3 +242,24 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# hooks.py
+
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "gada_electronics.custom_scripts.gl_entry_script.make_gl_entries",
+        "on_cancel": "gada_electronics.custom_scripts.gl_entry_script.cancel_gl_entries",
+    },
+    "Purchase Invoice": {
+        "on_submit": "gada_electronics.custom_scripts.gl_entry_script.make_gl_entries",
+        "on_cancel": "gada_electronics.custom_scripts.gl_entry_script.cancel_gl_entries",
+    },
+    "Payment Entry": {
+        "on_submit": "gada_electronics.custom_scripts.gl_entry_script.make_gl_entries",
+        "on_cancel": "gada_electronics.custom_scripts.gl_entry_script.cancel_gl_entries",
+    },
+    "Journal Entry": {
+        "on_submit": "gada_electronics.custom_scripts.gl_entry_script.make_gl_entries",
+        "on_cancel": "gada_electronics.custom_scripts.gl_entry_script.cancel_gl_entries",
+    },
+   
+}
